@@ -1,5 +1,18 @@
+'use client';
+
+import { useRouter } from 'next/navigation';
+
 function page() {
-  return <div>singUp</div>;
+  const router = useRouter();
+
+  return (
+    <div>
+      singUp
+      <button type="button" onClick={() => router.push('/class')}>
+        click me
+      </button>
+    </div>
+  );
 }
 
 export default page;
