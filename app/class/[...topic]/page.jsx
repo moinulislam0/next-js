@@ -1,5 +1,3 @@
-import React from 'react'
-
 async function page({ params }) {
   const { topic } = await params;
 
@@ -11,4 +9,13 @@ async function page({ params }) {
   );
 }
 
-export default page
+export default page;
+
+export async function generateMetadata({ params }) {
+  const { topic } = await params;
+
+  return {
+    title: `Topic - ${topic || "moinul"}`,
+    description: "this is hablu programmer websites",
+  };
+}
